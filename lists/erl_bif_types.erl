@@ -1361,10 +1361,10 @@ type(lists, keyfind, 3, Xs, Opaques) ->
 		     case t_tuple_subtypes(Tuple, Opaques) of
 		       unknown -> Ret;
 		       List ->
-			 case key_comparisons_fail(X, Y, List, Opaques) of
-			   true -> t_atom('false');
-			   false -> Ret
-			 end
+				 case key_comparisons_fail(X, Y, List, Opaques) of
+				   true -> t_atom('false');
+				   false -> Ret
+				 end
 		     end
 		 end
 	     end
